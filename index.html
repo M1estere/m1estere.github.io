@@ -9,8 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -20,33 +19,47 @@
     <main>
         <div class="welcome-section">
             <div>
-                <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 500;">M1estere</h1>
-                <h3 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 100; letter-spacing: 2px;">Beginner game developer</h3>
+                <div>
+                    <h1 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 500;">M1estere</h1>
+                    <h3 style="color: white; font-family: 'Roboto', sans-serif; font-weight: 100; letter-spacing: 2px;">
+                        Beginner game developer</h3>
+                </div>
+                <div class="arrow-moving-main-container">
+                    <a href="#information"><img class="arrow-moving-main" src="Pictures/arrow.png"></a>
+                </div>
             </div>
         </div>
 
-        <div class="information-section">
+        <div class="information-section" id="information">
             <div>
                 <div class="row">
                     <div class="col">
                         <h3 class="info-text" style="color: white; font-family: 'Roboto', sans-serif; font-weight: 300;">
-                            &nbsp;&nbsp;&nbsp;&nbsp;My name is Ilya , I am 18 years old and I am currently studying at the university in Russia, Moscow for a bachelor's degree in IT sphere.<hr style="background-color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A little information about me:<br>I really love game development and I have been doing it for 2 years already. I also enjoy web development and graphic design. There are not really many big projects, I have made so far, but I hope that in the future my portfolio will be filled with cool projects!</h3>
+                            &nbsp;&nbsp;&nbsp;&nbsp;My name is Ilya , I am 18 years old and I am currently studying at the university in Russia, Moscow for a bachelor's degree in IT sphere.
+                            <hr style="background-color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A little information about me:<br>I really love game development and I have been doing it for almost 2 years now. I also enjoy web development and graphic design. There are not really many
+                            big projects, I have made so far, but I hope that in the future my portfolio will be filled with cool projects!
+                        </h3>
                     </div>
                     <div class="col">
                         <img class="img-fluid" src="Pictures/ilya.png">
                     </div>
                 </div>
             </div>
+            <div class="arrow-moving-info-container">
+                <a href="#projects"><img class="arrow-moving-info" src="Pictures/arrow.png"></a>
+            </div>
+
         </div>
 
-        <div class="projects-section">
-            <h2 style="text-align: center; color: white; margin-bottom: 50px;">My projects</h2>
-            <div id="projects">
+
+        <div class="projects-section" id="projects">
+            <h2 style="text-align: center; color: white; margin-bottom: 50px; font-family: 'Roboto', sans-serif; font-weight: 500;">My projects</h2>
+            <div id="projects-container">
                 <a href="https://m1estere.itch.io/down-the-deep" target="_blank">
                     <div class="project-tile">
                         <img class="tile-img" src="Pictures/DownTheDeepITCH.jpg">
                         <div class="tile-text">
-                            <h4>Down The Deep</h4>
+                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;">Down The Deep</h4>
                         </div>
                     </div>
                 </a>
@@ -54,7 +67,7 @@
                     <div class="project-tile">
                         <img class="tile-img" src="Pictures/RacingDrift.png">
                         <div class="tile-text">
-                            <h4>Racing Drift</h4>
+                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;">Racing Drift</h4>
                         </div>
                     </div>
                 </a>
@@ -62,7 +75,7 @@
                     <div class="project-tile">
                         <img class="tile-img" src="Pictures/SaveCircle.png">
                         <div class="tile-text">
-                            <h4>Save Circle</h4>
+                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;">Save Circle</h4>
                         </div>
                     </div>
                 </a>
@@ -76,6 +89,7 @@
                     <div style="padding-top: 5px">
                         <h6 style="color: white; font-weight: 700">7156643@mail.ru</h6>
                         <h6 style="color: white; font-weight: 700">+7(905)715-66-43</h6>
+                        <h6 style="color: rgba(255, 255, 255, 0.329); font-weight: 300">&copy;2021</h6>
                     </div>
 
                 </div>
@@ -90,12 +104,6 @@
             </div>
         </div>
     </main>
-
-    <footer>
-
-    </footer>
-
-    <script src="" async defer></script>
 </body>
 
 
