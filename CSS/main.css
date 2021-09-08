@@ -246,13 +246,15 @@ body {
         height: 100vh;
         display: flex;
         align-items: center;
+        min-height: 400px;
     }
     .information-section {
-        padding-left: 1vw;
-        padding-right: 1vw;
+        min-width: 300px;
+        padding-left: 0vw;
+        padding-right: 0vw;
         padding-top: 5vh;
-        min-height: 100vh;
-        height: 120vh;
+        min-height: 600px;
+        height: 100vh;
     }
     .information-section>div {
         display: flex;
@@ -260,6 +262,7 @@ body {
         align-items: center;
         justify-content: center;
         height: 100%;
+        background-color: aqua;
     }
     .row {
         display: block;
