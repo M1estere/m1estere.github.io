@@ -252,11 +252,10 @@ body {
         padding-right: 1vw;
         padding-top: 5vh;
         min-height: 100vh;
-        height: 150vh;
+        height: 120vh;
     }
     .information-section>div {
         display: flex;
-        align-items: center;
         flex-direction: column;
         align-items: center;
         justify-content: center;
