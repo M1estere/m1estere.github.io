@@ -24,6 +24,92 @@ body {
     /* Firefox */
 }
 
+.beginner {
+    color: #FFFFFF;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #ffffff 0px 0px 20px, #ffffff 0px 0px 30px, #ffffff 0px 0px 40px, #ffffff 0px 0px 50px, #ffffff 0px 0px 75px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    animation: fadeIn 750ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        filter: blur(15px);
+        opacity: 0;
+    }
+    50% {
+        filter: blur(10px);
+        opacity: 0.9;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
+
+.glitch {
+    position: relative;
+    font-size: 5rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-shadow: 0.05em 0 0 rgba(223, 13, 13, 0.75), -0.025em -0.05em 0 rgba(13, 223, 13, 0.75), 0.025em 0.05em rgba(9, 166, 238, 0.75);
+}
+
+.glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-0.05em, -0.025em);*/
+}
+
+.glitch span:first-child {
+    animation: glitch 500ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-0.025em, -0.0125em);
+    opacity: 0.8;
+}
+
+.glitch span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+    transform: translate(0.0125em, 0.025em);
+    opacity: 0.8;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgb(255, 0, 0, 0.75), -0.05em -0.025em 0 rgb(0, 255, 0, 0.75), -0.025em 0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 rgb(255, 0, 0, 0.75), -0.05em -0.025em 0 rgb(0, 255, 0, 0.75), -0.025em 0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgb(255, 0, 0, 0.75), 0.025em 0.025em 0 rgb(0, 255, 0, 0.75), -0.05em -0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgb(255, 0, 0, 0.75), 0.025em 0.025em 0 rgb(0, 255, 0, 0.75), -0.05em -0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgb(255, 0, 0, 0.75), 0.05em 0 0 rgb(0, 255, 0, 0.75), 0 -0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgb(255, 0, 0, 0.75), 0.05em 0 0 rgb(0, 255, 0, 0.75), 0 -0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 rgb(255, 0, 0, 0.75), -0.025em -0.025em 0 rgb(0, 255, 0, 0.75), -0.025em -0.05em 0 rgb(0, 0, 255, 0.75);
+    }
+}
+
 @keyframes MoveUpDown {
     0% {
         bottom: 0px;
@@ -54,7 +140,7 @@ body {
     position: relative;
     max-width: 75px;
     max-height: 75px;
-    margin-top: 40.5vh;
+    margin-top: 38vh;
 }
 
 .welcome-section>div {
@@ -111,9 +197,28 @@ body {
     position: relative;
 }
 
-.info-text {
+hr {
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 20px 20px rgb(255, 255, 255)
+}
+
+#info-text {
+    opacity: 0;
     padding-right: 2vw;
     padding-left: 2vw;
+    color: #FFFFFF;
+    text-shadow: 2px 0px 8px rgb(255, 255, 255), 0px 0px 15px rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.animate-info-text-close {
+    animation: fadeOut 1000ms ease-in-out forwards;
+}
+
+.animate-info-text {
+    animation: fadeIn 1000ms ease-in-out forwards;
 }
 
 .img-fluid {
@@ -126,6 +231,18 @@ body {
     -moz-box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
     box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-out;
+    animation: pictureScale 1000ms linear;
+}
+
+@keyframes pictureScale {
+    from {
+        opacity: 0;
+        transform: scale3d(0, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .img-fluid:hover {
@@ -154,7 +271,7 @@ body {
 
 #projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 1rem;
     width: 100%;
     max-width: 1280px;
@@ -210,8 +327,7 @@ body {
     background-color: black;
     width: 100%;
     height: 15vh;
-    padding-left: 175px;
-    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .col-sm-8 {
@@ -226,7 +342,7 @@ body {
 
 .contacts-section>div {
     margin-left: 7vw;
-    margin-right: 7vw;
+    margin-right: 1vw;
     height: 100%;
     display: flex;
     align-items: center;
@@ -262,7 +378,6 @@ body {
         align-items: center;
         justify-content: center;
         height: 100%;
-        background-color: aqua;
     }
     .row {
         display: block;
@@ -318,7 +433,7 @@ body {
         padding-top: 75px;
         padding-bottom: 70px;
         min-width: 300px;
-        background-color: #5158BB;
+        background-color: #FFC069;
         width: 100%;
         min-height: 100vh;
     }
