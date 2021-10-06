@@ -5,7 +5,6 @@ var elementHeight = element.clientHeight;
 var newElement = document.getElementById('projects');
 var newElementHeight = newElement.clientHeight;
 
-// listen for scroll event and call animate function
 document.addEventListener('scroll', animateText);
 
 // check if element is in view
