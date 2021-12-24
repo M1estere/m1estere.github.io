@@ -5,10 +5,11 @@ var elementHeight = element.clientHeight;
 var newElement = document.getElementById('projects');
 var newElementHeight = newElement.clientHeight;
 
+// listen for scroll event and call animate function
 document.addEventListener('scroll', animateText);
 
 // check if element is in view
-function inView() {
+/*function inView() {
     // get window height
     var windowHeight = window.innerHeight;
     // get number of pixels that the document is scrolled
@@ -27,17 +28,9 @@ function inView() {
     }
 
     return false;
-}
+}*/
 
 // animate element when it is in view
 function animateText() {
-    // is element in view?
-    if (inView()) {
-        // element is in view, add class to element
-        element.classList.remove('animate-info-text-close');
-        element.classList.add('animate-info-text');
-    } else if (!inView()) {
-        element.classList.remove('animate-info-text');
-        element.classList.add('animate-info-text-close');
-    }
+    element.classList.add('animate-info-text');
 }
