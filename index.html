@@ -4,124 +4,115 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="Pictures/M1estereLogua.png" />
-    <title>M1estere Dev</title>
+    <title>Yasdoh</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="landing-bg">
+<body>
     <main>
-        <div class="welcome-section">
-            <div>
-                <div>
-                    <p>
-                        <h1 class="glitch">M1estere</h1>
-                        <h3 class="beginner">
-                            Beginner Game Developer</h3>
-                </div>
-                <div class="arrow-moving-main-container">
-                    <a href="#information"><img class="arrow-moving-main" src="Pictures/arrow.png"></a>
+        <section id="first-section" class="section">
+            <div class="section-wrapper">
+                <div class="main-title-container">
+                    <h1 class="main-title-heading">M1estere</h1>
+                    <p class="main-title-paragraph">Game Developer</p>
                 </div>
             </div>
-        </div>
+        </section>
+        <section id="second-section" class="section">
+            <div class="section-wrapper">
+                <div class="main-info-container">
+                    <p class="main-info-paragraph">&nbsp;&nbsp;&nbsp;&nbsp;My name is Ilya , I am 18 years old and I
+                        am currently studying
+                        at
+                        the university in Russia, Moscow for a bachelor's degree in IT sphere.<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;A little information about me:
+                        I really love game development and I have
+                        been doing it for almost 2 years now. I also
+                        enjoy web development and graphic design.<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;There are not really many big projects, I have made so far, but I
+                        hope that in the future my
+                        portfolio will be filled with cool projects!</p>
 
-        <div class="information-section" id="information">
-            <h2 style="text-align: center; color: white; margin-top: 50px; margin-bottom: 50px; font-family: 'Roboto', sans-serif; font-weight: 700; text-shadow: 4px 3px 0 #00000070;">Information About Me</h2>
-            <div>
-                <div class="row">
-                    <div class="col">
-                        <h3 id="info-text">
-                            &nbsp;&nbsp;&nbsp;&nbsp;My name is Ilya , I am 18 years old and I am currently studying at the university in Russia, Moscow for a bachelor's degree in IT sphere.
-                            <hr style="background-color: white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A little information about me:<br>I really love game development and I have been doing it for almost 2 years now. I also enjoy web development and graphic design. There are not really many
-                            big projects, I have made so far, but I hope that in the future my portfolio will be filled with cool projects!
-                        </h3>
-                    </div>
-                    <div class="col">
-                        <img class="img-fluid" src="Pictures/ilya.png">
-                    </div>
+                    <!-- сделать через bgimg <div></div> -->
+                    <img class="main-photo" src="./assets/img/main-photo.png" alt="main photo">
                 </div>
             </div>
-            <div class="arrow-moving-info-container">
-                <a href="#projects"><img class="arrow-moving-info" src="Pictures/arrow.png"></a>
-            </div>
-
-        </div>
-
-
-        <div class="projects-section" id="projects">
-            <h2 style="text-align: center; color: white; margin-bottom: 50px; font-family: 'Roboto', sans-serif; font-weight: 700; text-shadow: 4px 3px 0 #00000070;">My Projects</h2>
-            <div id="projects-container">
-                <a href="https://m1estere.itch.io/down-the-deep" target="_blank">
-                    <div class="project-tile">
-                        <img class="tile-img" src="Pictures/DownTheDeepITCH.jpg">
-                        <div class="tile-text">
-                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;">Down The Deep</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://m1estere.itch.io/racin-drift" target="_blank">
-                    <div class="project-tile">
-                        <img class="tile-img" src="Pictures/RacingDrift.png">
-                        <div class="tile-text">
-                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;">Racing Drift</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://m1estere.itch.io/save-circle" target="_blank">
-                    <div class="project-tile">
-                        <img class="tile-img" src="Pictures/SaveCircle.png">
-                        <div class="tile-text">
-                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;">Save Circle</h4>
-                        </div>
-                    </div>
-                </a>
-                <a>
-                    <div class="project-tile">
-                        <div>
-                            <h4></h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://m1estere.itch.io/tlotdn" target="_blank">
-                    <div class="project-tile">
-                        <img class="tile-img" src="Pictures/tlotdnIcon.png">
-                        <div class="tile-text">
-                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500; font-size: 1.3rem">The Legend of the Darkest Night</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="contacts-section">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h7 style="color: white">How to contact me:</h7><br>
-                    <div style="padding-top: 5px">
-                        <h6 style="color: white; font-weight: 700">7156643@mail.ru</h6>
-                        <h6 style="color: white; font-weight: 700">+7(905)715-66-43</h6>
-                        <h6 style="color: rgba(255, 255, 255, 0.329); font-weight: 300">&copy;2021</h6>
-                    </div>
-
-                </div>
-                <div class="col-sm-4">
-                    <div>
-                        <a href="https://vk.com/ilya_solov0" target="_blank"><img class="footer-img" src="Pictures/iconVK.png"></a>
-                        <a href="https://m1estere.itch.io/" target="_blank"><img class="footer-img" src="Pictures/itchIcon.png"></a>
-                        <a href="https://github.com/M1estere" target="_blank"><img class="footer-img" src="Pictures/iconGithub.png"></a>
+        </section>
+        <section id="third-section" class="section">
+            <div class="section-wrapper">
+                <div class="video-container">
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                    <div class="paragraph-wrapper">
+                        <p class="video-preview-paragraph">Apart from game development I enjoy making music and videos
+                            <br>Here you can see one of my works
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
+        <section id="fourth-section" class="section">
+            <div class="section-wrapper">
+                <div class="projects-section-container">
+                    <p class="projects-paragraph">Here are the most interesting projects I have made so far.
+                        <br>Though it is not too much, I hope that in the future it will be overfilled with some cool
+                        and
+                        interesting projects.
+                    </p>
+                    <ul class="project-list">
+                        <li class="project-list-item"><a class="project-list-link"
+                                href="https://m1estere.itch.io/racin-drift" target="_blank">
+                                <img class="project-list-photo" src="./assets/img/RacingDriftRegular.png"
+                                    onmouseover="this.src='./assets/img/HighlitedRacingDrift.png';"
+                                    onmouseout="this.src='./assets/img/RacingDriftRegular.png';"></a></li>
+                        <li class="project-list-item"><a class="project-list-link"
+                                href="https://m1estere.itch.io/down-the-deep" target="_blank">
+                                <img class="project-list-photo" src="./assets/img/RegularDownTheDeep.png"
+                                    onmouseover="this.src='./assets/img/HighlitedDownTheDeep.png';"
+                                    onmouseout="this.src='./assets/img/RegularDownTheDeep.png';"></a></li>
+                        <li class="project-list-item"><a class="project-list-link"
+                                href="https://m1estere.itch.io/save-circle" target="_blank">
+                                <img class="project-list-photo" src="./assets/img/RegularSaveCircle.png"
+                                    onmouseover="this.src='./assets/img/HighlitedSaveCircle.png';"
+                                    onmouseout="this.src='./assets/img/RegularSaveCircle.png';"></a></li>
+                        <li class="project-list-item"><a class="project-list-link"
+                                href="https://m1estere.itch.io/tlotdn" target="_blank">
+                                <img class="project-list-photo" src="./assets/img/RegularTLotDN.png"
+                                    onmouseover="this.src='./assets/img/HighlitedTLotDN.png';"
+                                    onmouseout="this.src='./assets/img/RegularTLotDN.png';"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="JS/main.js"></script>
+    <footer class="footer">
+        <div class="footer-icons-container">
+            <ul class="social-list">
+                <li class="social-list-item">
+                    <a class="social-list-link"><img src='./assets/svg/itch-icon.svg' alt="itch logo"></a>
+                </li>
+                <li class="social-list-item">
+                    <a class="social-list-link"><img src="./assets/svg/vk-icon.svg" alt="vk logo"></a>
+                </li>
+                <li class="social-list-item">
+                    <a class="social-list-link"><img src="./assets/svg/github-icon.svg" alt="github logo"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-text">
+            <ul class="contacts-list">
+                <li class="contacts-list-item">7156643@mail.ru</li>
+                <li class="contacts-list-item">8(905)715-66-43</li>
+            </ul>
+            <span>&copy;</span>
+            <span>2022</span>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
 </body>
-
 
 </html>
