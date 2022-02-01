@@ -136,6 +136,15 @@ body {
 .main-photo {
     height: clamp(200px, 70vw, 400px);
     width: clamp(200px, 70vw, 400px);
+    border-radius: 60px;
+    -webkit-box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-out;
+}
+
+.main-photo:hover {
+    transform: translateX(5px) translateY(5px);
 }
 
 .video-container {
@@ -145,7 +154,7 @@ body {
 
 
 /* @media screen and (min-width: 1024px) {
-    .main-info-paragraph {
+    .main-info-paragraph { 
         font-size: 27px;
     }
 } */
