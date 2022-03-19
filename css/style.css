@@ -16,6 +16,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: relative;
+    user-select: none;
 }
 
 body::-webkit-scrollbar {
@@ -79,10 +80,6 @@ body::-webkit-scrollbar {
     .vl-text {
         display: none;
     }
-}
-
-main {
-    user-select: none;
 }
 
 .section {
