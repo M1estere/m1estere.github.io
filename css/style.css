@@ -29,10 +29,77 @@ main {
     height: 100vh;
 }
 
-@media screen and (max-height: 900px) and (min-width: 700px) {
+@media screen and (max-height: 700px) and (min-width: 700px) {
     .section {
         height: 1000px;
     }
+}
+
+.bg-img {
+    position: absolute;
+    z-index: 0;
+}
+
+@media (max-width: 1392px) {
+    .bg-img {
+        display: none;
+    }
+}
+
+#second-section .bg-img:nth-child(1) {
+    width: 92px;
+    height: 68px;
+    transform: rotate(-14.48deg);
+    left: 15%;
+    margin-top: -24%;
+}
+
+#second-section .bg-img:nth-child(2) {
+    width: 59px;
+    height: 59px;
+    transform: rotate(20deg);
+    left: 42%;
+    margin-top: 20%;
+}
+
+#third-section .bg-img:nth-child(1) {
+    width: 86px;
+    height: 38px;
+    transform: rotate(11deg);
+    left: 63%;
+    margin-top: -1%;
+}
+
+#third-section .bg-img:nth-child(2) {
+    width: 94px;
+    height: 57px;
+    transform: rotate(-11deg);
+    left: 87%;
+    margin-top: 26%;
+}
+
+#third-section .bg-img:nth-child(3) {
+    width: 334px;
+    height: 291px;
+    transform: rotate(2deg);
+    left: 42%;
+    margin-top: 15%;
+}
+
+#fourth-section .bg-img:nth-child(1) {
+    width: 79px;
+    height: 79px;
+    transform: rotate(23deg);
+    left: 10%;
+    margin-top: -25%;
+}
+
+#fourth-section .bg-img:nth-child(2) {
+    width: 106px;
+    height: 70px;
+    transform: rotate(17deg);
+    left: 27%;
+    margin-top: 26%;
 }
 
 #first-section {
@@ -106,6 +173,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .paragraph-wrapper {
@@ -127,6 +195,7 @@ main {
     line-height: 32px;
     margin-right: 65px;
     width: 566px;
+    z-index: 1;
 }
 
 @media (max-width: 1050px) {
@@ -152,6 +221,7 @@ main {
     -moz-box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
     box-shadow: 12px 13px 10px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-out;
+    z-index: 1;
 }
 
 .main-photo:hover {
@@ -161,6 +231,7 @@ main {
 .video-container {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 
@@ -174,6 +245,7 @@ main {
     width: clamp(280px, 90vw, 560px);
     height: clamp(160px, 90vw, 320px);
     margin: auto;
+    z-index: 1;
 }
 
 .video-preview-paragraph {
@@ -184,6 +256,7 @@ main {
     font-size: clamp(24px, 2.7vw, 27px);
     line-height: 32px;
     margin-left: 50px;
+    z-index: 1;
 }
 
 @media (max-width: 1392px) {
@@ -205,6 +278,7 @@ main {
     justify-content: center;
     width: 100%;
     align-items: center;
+    position: relative;
 }
 
 .projects-paragraph {
