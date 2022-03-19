@@ -23,22 +23,60 @@ body::-webkit-scrollbar {
 }
 
 .vl {
-    border-left: 6px solid #ffffff;
-    height: 83%;
-    bottom: 0;
+    border-left: 9px solid #ffffff;
+    /* height: 83%;
+    bottom: 0; */
+    height: 69%;
+    top: 17%;
     position: absolute;
     right: 10%;
     z-index: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.vl-text {
+    position: absolute;
+    color: #ffffff;
+    top: 18.5%;
+    transform: rotate(90deg);
+    right: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 45px;
+    line-height: 78.19%;
+    letter-spacing: 0.055em;
+}
+
+.vl-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 10%;
+    margin-right: -21px;
 }
 
 @media (max-width: 1600px) {
     .vl {
         right: 5%;
     }
+    .vl-circle {
+        right: 5%;
+    }
+    .vl-text {
+        right: -1%;
+    }
 }
 
 @media (max-width: 1392px) {
     .vl {
+        display: none;
+    }
+    .vl-circle {
+        display: none;
+    }
+    .vl-text {
         display: none;
     }
 }
