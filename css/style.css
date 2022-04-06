@@ -16,6 +16,13 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: relative;
+}
+
+body>main {
+    user-select: none;
+}
+
+body>h2 {
     user-select: none;
 }
 
@@ -303,6 +310,10 @@ body::-webkit-scrollbar {
     height: clamp(160px, 90vw, 320px);
     margin: auto;
     z-index: 1;
+    border-radius: 15px;
+    -webkit-box-shadow: 8px 8px 15px -1px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 8px 8px 15px -1px rgba(0, 0, 0, 0.13);
+    box-shadow: 8px 8px 15px -1px rgba(0, 0, 0, 0.13);
 }
 
 .video-preview-paragraph {
