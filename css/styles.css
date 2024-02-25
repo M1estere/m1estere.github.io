@@ -51,6 +51,7 @@ body {
 }
 
 .swiper-slide {
+  max-width: 487px;
   width: 487px;
   display: flex;
   justify-content: center;

@@ -32,7 +32,7 @@ const data = [
 ];
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 5,
+    slidesPerView: "auto",
     spaceBetween: 30,
     loop: true,
     freeMode: true,
