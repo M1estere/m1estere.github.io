@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-black-color: #222222;
+  --header-height: 134px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  background-color: var(--main-black-color);
+  z-index: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 79%;
+}
+
+.header-section-text {
+  @apply text-start text-white lg:text-2xl md:text-base text-xs font-light tracking-wide;
+}
+
+.navbar-active {
+  @apply transition duration-300 bg-black bg-opacity-25 backdrop-blur-[9px] shadow-[#0000010] shadow-3xl;
+}/*# sourceMappingURL=styles.css.map */
