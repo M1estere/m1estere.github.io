@@ -43,6 +43,47 @@ const data = [
     },
 ];
 
+const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+for (let index = 0; index < data.length; index++) {
+    const swiperBlock = document.createElement('div');
+    swiperBlock.classList.add('swiper-slide');
+
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('swiper-slide-wrapper');
+    wrapper.style.backgroundImage = `url(${data[index].image})`;
+
+    const mainDiv = document.createElement('div');
+    mainDiv.classList.add('main-div');
+    mainDiv.style.backgroundImage = 'linear-gradient(180deg, #00000000 0%, #000000 95%)';
+
+    const mainDivText = document.createElement('span');
+    mainDivText.textContent = data[index].title;
+    mainDiv.appendChild(mainDivText);
+
+    const hoverDiv = document.createElement('div');
+    hoverDiv.classList.add('hover-div');
+
+    const hoverDivTitle = document.createElement('span');
+    hoverDivTitle.classList.add('title');
+    hoverDivTitle.textContent = data[index].title;
+
+    const hoverDivTools = document.createElement('span');
+    hoverDivTools.classList.add('tools');
+    hoverDivTools.textContent = data[index].tools;
+    
+    hoverDiv.appendChild(hoverDivTitle);
+    hoverDiv.appendChild(hoverDivTools);
+
+    wrapper.appendChild(mainDiv);
+    wrapper.appendChild(hoverDiv);
+
+    swiperBlock.appendChild(wrapper);
+
+    swiperWrapper.appendChild(swiperBlock);
+}
+
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,

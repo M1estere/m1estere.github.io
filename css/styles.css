@@ -19,6 +19,8 @@ body {
   position: relative;
   background-color: var(--main-black-color);
   z-index: 0;
+  max-width: 2100px;
+  margin: 0 auto;
 }
 
 ::-webkit-scrollbar {
@@ -51,17 +53,66 @@ body {
 }
 
 .swiper-slide {
+  user-select: none;
+  border-radius: 24px;
   max-width: 487px;
   width: 487px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.swiper-slide-wrapper {
+  position: relative;
+  background-position: center;
+  
+  @apply size-full cursor-pointer;
 }
+
+.main-div {
+  transition: all 400ms ease-in-out;
+  opacity: 1;
+  height: 100%;
+
+  @apply p-6 w-full h-full flex flex-col justify-end;
+}
+
+.main-div span {
+  @apply uppercase block text-3xl font-bold tracking-wide text-white;
+}
+
+.swiper-slide-wrapper  {
+  background-size: 100%;
+  transition: 1s ease-in-out; 
+}
+
+.swiper-slide-wrapper:hover  {
+  background-size: 110%;
+  transition: 1s ease-in-out;
+}
+
+.swiper-slide-wrapper:hover .main-div {
+  opacity: 0;
+}
+
+.swiper-slide-wrapper:hover .hover-div {
+  opacity: 1;
+}
+
+.hover-div {
+  transition: all 400ms ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @apply flex flex-col justify-center items-center size-full bg-black bg-opacity-65 backdrop-blur-[4px] shadow-[#0000010] shadow-3xl;
+}
+
+.hover-div .title {
+  @apply block text-3xl font-bold tracking-wide text-white;
+}
+
+.hover-div .tools {
+  @apply block text-xl font-normal tracking-wide text-gray-500;
+}
+
 /*# sourceMappingURL=styles.css.map */
