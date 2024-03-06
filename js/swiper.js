@@ -33,12 +33,19 @@ const data = [
         desc: 'A game where players can feel as an underwater explorers',
         tools: 'Unity, C#',
         status: 'Released',
-    }, 
+    },
     {
         image: 'assets/img/projects/The_Darkest_Night.png',
         title: 'The Darkest Night',
         desc: 'A top-down challenging action game',
         tools: 'Unity, C#',
+        status: 'Released',
+    },
+    {
+        image: 'assets/img/projects/Tune_Studio.png',
+        title: 'Tune Studio',
+        desc: 'A mobile music service app with a cool style',
+        tools: 'Android Studio, Java',
         status: 'Released',
     },
 ];

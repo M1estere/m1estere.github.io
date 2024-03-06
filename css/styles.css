@@ -39,17 +39,125 @@ body {
   -webkit-box-shadow: inset 0 0 6px #00000080; 
 }
 
+.start-button {
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.start-button .circle-fill {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: white;
+  transition:  0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.start-button:hover .header-section-text {
+  color: black;
+}
+
+.start-button:hover > .circle-fill {
+  width: 400px;
+  height: 400px;
+}
+
+.start-button:active {
+  background-color: white;
+}
+
 .header-section-text {
-  @apply text-start text-white lg:text-2xl md:text-base text-xs font-light tracking-wide;
+  color: white;
+  transition: .3s linear;
+  @apply text-start lg:text-2xl md:text-base text-xs font-light tracking-wide;
+}
+
+.nav-button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-button::after {
+  display: block;
+  box-sizing: border-box;
+  content: '';
+
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  z-index: 200;
+
+  width: 100%;
+  height: 1px;
+  background-color: white;
+
+  transform: scaleX(0);
+  transition: .1s ease-in-out;
+}
+
+.nav-button:hover::after {
+  transform: scaleX(1);
+  box-shadow: 0px -4px 8px 0px rgba(255, 255, 255);
 }
 
 .navbar-active {
   @apply transition duration-300 bg-black bg-opacity-25 backdrop-blur-[9px] shadow-[#0000010] shadow-3xl;
 }
 
+.blink-cursor {
+  display: block;
+  position: relative;
+}
+
+.blink-cursor::after {
+  display: block;
+  box-sizing: border-box;
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+  right: -3px;
+  z-index: -1;
+
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  animation: blinker 1.25s ease-in-out infinite;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 523px;
+  max-height: 523px;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -71,6 +179,7 @@ body {
   transition: all 400ms ease-in-out;
   opacity: 1;
   height: 100%;
+  background-repeat: no-repeat;
 
   @apply p-6 w-full h-full flex flex-col justify-end;
 }
@@ -82,6 +191,7 @@ body {
 .swiper-slide-wrapper  {
   background-size: 100%;
   transition: 1s ease-in-out; 
+  background-repeat: no-repeat;
 }
 
 .swiper-slide-wrapper:hover  {
@@ -113,6 +223,41 @@ body {
 
 .hover-div .tools {
   @apply block text-xl font-normal tracking-wide text-gray-500;
+}
+
+.skills-block > div {
+  height: 188px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-block > div > img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0);
+  transition: 300ms ease-in-out;
+}
+
+.skills-block > div > img:hover {
+  filter: brightness(1);
+}
+
+.footer-icons-block > div {
+  width: 60px;
+  height: 60px;
+}
+
+.footer-icons-block > div > img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0);
+  transition: 300ms ease-in-out;
+}
+
+.footer-icons-block > div > img:hover {
+  cursor: pointer;
+  filter: brightness(1);
 }
 
 /*# sourceMappingURL=styles.css.map */

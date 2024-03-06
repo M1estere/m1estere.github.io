@@ -18,9 +18,9 @@
                 <span class="header-section-text">B</span>
             </div>
             <div class="flex-1 flex-row items-center gap-[40px] lg:flex hidden">
-                <span class="header-section-text">ABOUT</span>
-                <span class="header-section-text">PROJECTS</span>
-                <span class="header-section-text">SKILLS</span>
+                <span class="header-section-text nav-button">ABOUT</span>
+                <span class="header-section-text nav-button">PROJECTS</span>
+                <span class="header-section-text nav-button">SKILLS</span>
             </div>
 
             <div class="flex-1 flex flex-row justify-center items-center">
@@ -28,7 +28,8 @@
             </div>
 
             <div class="flex-1 flex flex-row justify-end">
-                <div class="border-white border-2 rounded-full px-[20px] py-[5px]">
+                <div class="border-white border-2 rounded-full px-[20px] py-[8px] start-button flex justify-center items-center h-fit lg:leading-6 md:leading-4 leading-3">
+                    <span class="circle-fill"></span>
                     <span class="header-section-text">Contact me</span>
                 </div>
             </div>
@@ -44,11 +45,13 @@
                 </span>
 
                 <div class="py-20 flex flex-row gap-[80px]">
-                    <div class="border-white border-2 rounded-[5px] px-[40px] py-[15px]">
+                    <div class="border-white border-2 rounded-[5px] px-[40px] py-[15px] start-button">
+                        <span class="circle-fill"></span>
                         <span class="header-section-text">Resume</span>
                     </div>
 
-                    <div class="border-white border-2 rounded-[5px] px-[40px] py-[15px]">
+                    <div class="border-white border-2 rounded-[5px] px-[40px] py-[15px] start-button">
+                        <span class="circle-fill"></span>
                         <span class="header-section-text">Portfolio</span>
                     </div>
                 </div>
@@ -68,25 +71,35 @@
                         <div class="w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
                             <span class="text-start text-red-600 lg:text-2xl md:text-base text-xs font-normal tracking-wide">ABOUT</span>
                         </div></br>
-                        <span class="text-start text-white lg:text-3xl md:text-base text-xs font-bold tracking-wide">Developer</span></br>
+                        <span class="text-start text-white lg:text-3xl md:text-base text-xs font-bold tracking-wide blink-cursor w-fit">Developer</span></br>
                         <span class="text-start text-white lg:text-2xl md:text-base text-xs font-light tracking-wide">My name is Ilya , I am 19 years old and I am currently studying at the university in Russia, Moscow for a bachelor's degree in IT sphere.
                             A little information about me:
                             I really love game development and I have 
                             been doing it for 2 years now. 
-                            </span>
+                        </span>
                     </div>
 
                     <div class="z-[-2] lg:size-[350px] md:size-[150px] size-[100px] absolute lg:bottom-[18%] bottom-[70%] lg:left-[3%] left-[15%] rounded-full bg-gradient-to-tr from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
                     </div>
                 </div>
 
-                <div class="md:w-[50%] sm:w-full w-full md:h-full sm:h-[50%] h-[50%] flex-1">
-                    <img src="assets/img/picture.jpg" class="object-cover h-full w-full" />
+                <div class="md:w-[50%] sm:w-full w-full md:h-full sm:h-[50%] h-[50%] flex-1 flex justify-center items-center">
+                    <img src="assets/img/picture_2.jpg" class="rounded-[20px] object-cover h-[80%] w-[80%]" />
                 </div>
             </div>
         </section>
 
-        <section id="projects-section" class="pt-[100px] w-full h-screen">
+        <section id="projects-section" class="relative mt-[150px] w-full h-screen flex flex-col items-center gap-[75px]">
+            <div class="flex justify-center items-center flex-col">
+                <div class="w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                    <span class="text-start text-red-600 lg:text-2xl md:text-base text-xs font-normal tracking-wide uppercase">projects</span>
+                </div></br>
+
+                <div>
+                    <span class="font-bold text-center text-white lg:text-3xl md:text-base text-xs tracking-wide">Watch my most interesting stuff</span>
+                </div>
+            </div>
+
             <!-- Slider main container -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -94,15 +107,121 @@
                 </div>
             </div>
             
+            <div class="z-[-2] lg:size-[400px] md:size-[200px] size-[150px] translate-x-1/2 absolute top-[-3%] right-[50%] rounded-full bg-gradient-to-t from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
         </section>
 
-        <!-- <section id="skills-section" class="w-full h-screen">
-            
-        </section> -->
+        <section id="skills-section" class="relative mt-[150px] w-full h-screen">
+            <div class="w-[75%] flex flex-col items-center gap-[75px] mx-auto">
+                <div class="flex justify-center items-center flex-col">
+                    <div class="w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                        <span class="text-start text-red-600 lg:text-2xl md:text-base text-xs font-normal tracking-wide uppercase">skills</span>
+                    </div></br>
+    
+                    <div>
+                        <span class="font-bold text-center text-white lg:text-3xl md:text-base text-xs tracking-wide">What I am made of</span>
+                    </div>
+                </div>
+    
+                <div class="flex gap-y-[120px] gap-x-[90px] justify-between flex-wrap skills-block">
+                    <div>
+                        <img src="assets/img/skills/unity.png" alt="unity"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/csharp.png" alt="csharp"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/flutter.png" alt="flutter"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/python.png" alt="python"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/android_studio.png" alt="android_studio"/>
+                    </div>
+    
+                    <div>
+                        <img class="max-h-[96px] w-[176px]" src="assets/img/skills/php.png" alt="php"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/firebase.png" alt="firebase"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/git.png" alt="git"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/dart.png" alt="dart"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/skills/html.png" alt="html"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="z-[-2] lg:size-[420px] md:size-[240px] size-[150px] absolute top-[3%] left-[15%] rounded-full bg-gradient-to-tr from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+
+            <div class="z-[-2] lg:size-[650px] md:size-[400px] size-[300px] absolute top-[7%] right-[15%] rounded-full bg-gradient-to-l from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="relative mt-[150px] w-full h-fit flex flex-col items-center gap-[75px] pb-[30px]">
+        <div class="flex justify-center items-center flex-col">
+            <div class="w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                <span class="text-start text-red-600 lg:text-2xl md:text-base text-xs font-normal tracking-wide uppercase">contact me</span>
+            </div></br>
 
+            <div>
+                <span class="font-bold text-center text-white lg:text-3xl md:text-base text-xs tracking-wide">Let's get to know each other</span>
+
+                <div class="mt-[20px]">
+                    <div class="flex flex-row justify-start items-center gap-[20px]">
+                        <img src="assets/img/footer/mail.png" alt="mail"/>
+                        <span class="text-xl text-white text-start tracking-wide">7156643@gmail.com</span>
+                    </div>
+
+                    <div class="mt-[10px] flex flex-row justify-start items-center gap-[20px]">
+                        <img src="assets/img/footer/phone.png" alt="phone"/>
+                        <span class="text-xl text-white text-start tracking-wide">8 (905) 715-66-43</span>
+                    </div>
+                </div>
+
+                <div class="mt-[50px] flex flex-row justify-between items-center h-fit footer-icons-block">
+                    <div>
+                        <img src="assets/img/footer/github.png" alt="github"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/footer/instagram.png" alt="instagram"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/footer/itch.png" alt="itch"/>
+                    </div>
+    
+                    <div>
+                        <img src="assets/img/footer/vk.png" alt="vk"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-[150px]">
+                <span class="text-gray-600 text-xl">© 2024</span>
+            </div>
+
+            <div class="z-[-2] lg:size-[300px] md:size-[250px] size-[150px] absolute top-[-5%] left-[35%] rounded-full bg-gradient-to-tr from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+        </div>
+        
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
