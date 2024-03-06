@@ -5,6 +5,7 @@ const data = [
         desc: 'A mobile app is for anime fans to explore and watch their favorite shows',
         tools: 'Flutter, Dart',
         status: 'In Development',
+        link: 'https://github.com/M1estere/anime_checker',
     },
     {
         image: 'assets/img/projects/Racing_Drift_2.png',
@@ -12,6 +13,7 @@ const data = [
         desc: 'An exciting 3D racing game, continuation of Racing Drift game',
         tools: 'Unity, C#',
         status: 'Released',
+        link: 'https://thunder-fox-studios.itch.io/racing-drift-2',
     },
     {
         image: 'assets/img/projects/Byte_Bound.png',
@@ -19,6 +21,7 @@ const data = [
         desc: 'A game that allows players to play as electric AI',
         tools: 'Unity, C#',
         status: 'Released',
+        link: 'https://thunder-fox-studios.itch.io/byte-bound',
     },
     {
         image: 'assets/img/projects/Ink_Dreams.png',
@@ -26,6 +29,7 @@ const data = [
         desc: 'A mobile app for reading and managing manga books',
         tools: 'Flutter, Dart',
         status: 'Released',
+        link: 'https://github.com/M1estere/Ink_Dreams',
     },
     {
         image: 'assets/img/projects/Down_The_Deep.png',
@@ -33,6 +37,7 @@ const data = [
         desc: 'A game where players can feel as an underwater explorers',
         tools: 'Unity, C#',
         status: 'Released',
+        link: 'https://m1estere.itch.io/down-the-deep',
     },
     {
         image: 'assets/img/projects/The_Darkest_Night.png',
@@ -40,6 +45,7 @@ const data = [
         desc: 'A top-down challenging action game',
         tools: 'Unity, C#',
         status: 'Released',
+        link: 'https://m1estere.itch.io/the-darkest-night',
     },
     {
         image: 'assets/img/projects/Tune_Studio.png',
@@ -47,6 +53,7 @@ const data = [
         desc: 'A mobile music service app with a cool style',
         tools: 'Android Studio, Java',
         status: 'Released',
+        link: 'https://github.com/M1estere/Music_Service_Studio',
     },
 ];
 
@@ -59,6 +66,9 @@ for (let index = 0; index < data.length; index++) {
     const wrapper = document.createElement('div');
     wrapper.classList.add('swiper-slide-wrapper');
     wrapper.style.backgroundImage = `url(${data[index].image})`;
+    wrapper.onclick = () => {
+        window.open(data[index].link, '_blank');
+    };
 
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('main-div');
@@ -71,6 +81,10 @@ for (let index = 0; index < data.length; index++) {
     const hoverDiv = document.createElement('div');
     hoverDiv.classList.add('hover-div');
 
+    const hoverDivStatusText = document.createElement('span');
+    hoverDivStatusText.classList.add('status');
+    hoverDivStatusText.textContent = data[index].status;
+
     const hoverDivTitle = document.createElement('span');
     hoverDivTitle.classList.add('title');
     hoverDivTitle.textContent = data[index].title;
@@ -79,6 +93,7 @@ for (let index = 0; index < data.length; index++) {
     hoverDivTools.classList.add('tools');
     hoverDivTools.textContent = data[index].tools;
     
+    hoverDiv.appendChild(hoverDivStatusText);
     hoverDiv.appendChild(hoverDivTitle);
     hoverDiv.appendChild(hoverDivTools);
 

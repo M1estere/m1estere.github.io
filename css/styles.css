@@ -58,6 +58,10 @@ body {
   z-index: -1;
 }
 
+.start-button:hover .button-text {
+  color: black;
+}
+
 .start-button:hover .header-section-text {
   color: black;
 }
@@ -74,7 +78,15 @@ body {
 .header-section-text {
   color: white;
   transition: .3s linear;
-  @apply text-start lg:text-2xl md:text-base text-xs font-light tracking-wide;
+
+  @apply text-start text-lg font-light tracking-wide;
+}
+
+.button-text {
+  color: white;
+  transition: .3s linear;
+  
+  @apply text-center text-xl font-light tracking-wide;
 }
 
 .nav-button {
@@ -89,7 +101,7 @@ body {
   content: '';
 
   position: absolute;
-  bottom: -8px;
+  bottom: -2px;
   left: 0;
   z-index: 200;
 
@@ -214,11 +226,15 @@ body {
   top: 0;
   left: 0;
 
-  @apply flex flex-col justify-center items-center size-full bg-black bg-opacity-65 backdrop-blur-[4px] shadow-[#0000010] shadow-3xl;
+  @apply flex flex-col gap-[6px] justify-center items-center size-full bg-black bg-opacity-65 backdrop-blur-[4px] shadow-[#0000010] shadow-3xl;
+}
+
+.hover-div .status {
+  @apply block text-lg font-normal tracking-wide text-gray-500 uppercase;
 }
 
 .hover-div .title {
-  @apply block text-3xl font-bold tracking-wide text-white;
+  @apply block text-3xl font-bold tracking-wider text-white;
 }
 
 .hover-div .tools {
