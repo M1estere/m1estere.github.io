@@ -14,6 +14,8 @@ $(document).ready(function() {
     let obstacleInterval;
     let itemInterval;
 
+    let isJumping = false;
+
     // $('#audio')[0].stop();
     $('#score').hide();
     $('#lives').hide();
@@ -54,9 +56,13 @@ $(document).ready(function() {
     }
 
     $(document).keydown(function(e) {
-        if (e.key === " " && gameActive) {
-            dino.animate({ bottom: jumpHeight }, 430)
-                .animate({ bottom: 0 }, 430);
+        if (e.key === " " && gameActive && !isJumping) {
+            isJumping = true;
+            dino.animate({ bottom: jumpHeight }, 430, function() {
+                dino.animate({ bottom: 0 }, 430, function() {
+                    isJumping = false;
+                });
+            });
         }
     });
 
