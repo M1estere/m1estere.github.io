@@ -1,11 +1,13 @@
-:root {
-  --main-black-color: #222222;
-  --header-height: 134px;
-}
-
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url('../fonts/press-start-k.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -13,10 +15,30 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: relative;
-  background-color: var(--main-black-color);
   z-index: 0;
   max-width: 2100px;
   margin: 0 auto;
+  font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h1#title {
+  color: #d40404;
+}
+
+#startButton, #restartButton {
+  width: 200px;
+  height: 70px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: black;
+  color: #d40404;
+  border-radius: 5px;
+  border: 2px solid white;
 }
 
 ::-webkit-scrollbar {
@@ -31,16 +53,39 @@ body {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 100px;
-  background: #453838; 
-  -webkit-box-shadow: inset 0 0 6px #00000080; 
+  background: #453838;
+  -webkit-box-shadow: inset 0 0 6px #00000080;
 }
 
 #score {
-  margin-left: 10px;
-  margin-top: 10px;
-  font-size: 22px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
   font-weight: bold;
-  text-transform: uppercase;
+}
+
+#lives {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.life {
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/heart.png');
+  background-size: cover;
+  margin-left: 5px;
+}
+
+.life.active {
+  display: block;
+}
+
+.life.inactive {
+  display: none;
 }
 
 #gameOver, #gameStart {
@@ -48,35 +93,57 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
   z-index: 10;
 }
 
 .dino {
   width: 50px;
-  height: 50px;
-  background-color: green;
+  height: 70px;
   position: absolute;
   bottom: 0;
   left: 55px;
   border-radius: 10px 10px 0 0;
+  background-size: cover;
+  background-image: url('../img/player.png');
 }
 
 .container {
-  width: 65%;
+  width: 60%;
   height: 100%;
   box-sizing: border-box;
   display: flex;
   background-color: white;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  /* background-image: url('../img/background.jpg'); */
+  background-repeat: repeat;
+  animation: scrollBackground 20s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
 }
 
 .obstacle {
-  background-color: red;
+  background-image: url('../img/monster.png');
+  background-size: cover;
+  width: 65px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+}
+
+.item {
+  background-color: gold;
   position: absolute;
   bottom: 0;
 }
