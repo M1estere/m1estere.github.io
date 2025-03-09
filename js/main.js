@@ -10,7 +10,7 @@ $(document).ready(function() {
     let itemWidth = 30;
     let obstacles = [];
     let items = [];
-    let maxObstacles = 2;
+    let maxObstacles = 10;
     let obstacleInterval;
     let itemInterval;
 
