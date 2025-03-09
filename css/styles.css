@@ -29,6 +29,37 @@ h1#title {
   color: #d40404;
 }
 
+#gameOver {
+  color: white;
+  text-decoration: none;
+}
+
+.win {
+  color: white !important;
+}
+
+.win#gameOver > h1 {
+  color: white;
+  animation: scale 2s infinite alternate;
+}
+
+a {
+  color: white;
+}
+
+.win#gameOver > h1 > a {
+  color: white;
+}
+
+@keyframes scale {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.02);
+  }
+}
+
 #startButton, #restartButton {
   width: 200px;
   height: 70px;
@@ -38,7 +69,8 @@ h1#title {
   background-color: black;
   color: #d40404;
   border-radius: 5px;
-  border: 2px solid white;
+  cursor: pointer;
+  border: none;
 }
 
 ::-webkit-scrollbar {
@@ -61,7 +93,7 @@ h1#title {
   position: absolute;
   top: 15px;
   left: 15px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -73,8 +105,8 @@ h1#title {
 }
 
 .life {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   background-image: url('../img/heart.png');
   background-size: cover;
   margin-left: 5px;
@@ -118,19 +150,9 @@ h1#title {
   position: relative;
   overflow: hidden;
   background-size: cover;
-  /* background-image: url('../img/background.jpg'); */
+  background-image: url('../img/background.png');
   background-repeat: repeat;
-  animation: scrollBackground 20s linear infinite;
-  animation-play-state: paused;
-}
-
-@keyframes scrollBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -100% 0;
-  }
+  border-radius: 5px;
 }
 
 .obstacle {
@@ -143,7 +165,10 @@ h1#title {
 }
 
 .item {
-  background-color: gold;
   position: absolute;
   bottom: 0;
+  background-image: url('../img/waffle.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
 }

@@ -10,22 +10,25 @@ $(document).ready(function() {
     let itemWidth = 30;
     let obstacles = [];
     let items = [];
-    let maxObstacles = 10;
+    let maxObstacles = 2;
     let obstacleInterval;
     let itemInterval;
 
+    // $('#audio')[0].stop();
     $('#score').hide();
     $('#lives').hide();
     $('#startButton').click(function () {
         $('#gameStart').hide();
         $('#score').show();
         $('#lives').show();
+        $('#audio')[0].play();
 
         gameActive = true;
         score = 0;
         lives = 3;
         obstacles = [];
         items = [];
+
         obstacleInterval = setInterval(generateObstacle, 2000);
         itemInterval = setInterval(generateItem, 3000);
 
@@ -67,7 +70,7 @@ $(document).ready(function() {
             return;
         }
 
-        let multiplier = getRandomNumber(.65, 1);
+        let multiplier = getRandomNumber(.65, 1.2);
         let obstacle = $('<div class="obstacle"></div>');
         obstacle.css({
             position: 'absolute',
@@ -103,10 +106,7 @@ $(document).ready(function() {
         item.css({
             position: 'absolute',
             right: 0,
-            bottom: Math.random() * 50 + 30 + 'px',
-            width: itemWidth,
-            height: itemWidth,
-            backgroundColor: 'gold'
+            bottom: Math.random() * 50 + 40 + 'px'
         });
         $('#items').append(item);
         items.push(item);
@@ -205,7 +205,9 @@ $(document).ready(function() {
 
         $('#gameOver').show();
         if (won) {
-            $('#gameOver h1').text("You won!");
+            $('#gameOver h1').addClass('win');
+            $('#gameOver h1').html("You won!<br/> <a href='https://m1estere.github.io/'>Developers</a><br/>");
+            $('#gameOver h1').css('animation-play-state', 'running');
         } else {
             $('#gameOver h1').text("Game Over");
         }

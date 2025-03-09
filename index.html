@@ -10,8 +10,10 @@
 </head>
 
 <body style="background-color: black;">
+    <audio id="audio" src="./audio/music.mp3"></audio>
+
     <div style="margin-top: 50px; display: flex; width: 100%; height: fit-content; justify-content: center; align-items: center;">
-        <h1 id="title" style="text-transform: uppercase;">Stranger Things</h1>
+        <h1 id="title" style="text-transform: uppercase; user-select: none;">Stranger Things</h1>
     </div>
 
     <div style="width: 100%; height: 500px; padding: 15px; box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;">
@@ -41,9 +43,16 @@
     </div>
 
     <div style="margin-top: 5px; width: 100%; height: fit-content; display: flex; justify-content: center;">
-        <span style="color: white;">
-            Правила игры бла бла бла
-        </span>
+        <div style="width: 50%; text-align: center;">
+            <span style="color: white; font-family: cursive;">
+                Game rules<br/>
+                <b>Space</b> - Jump<br/>
+                <b>Start</b> - Start game<br/><br/>
+                The game will end when you score <b>10</b> points<br/>
+                You have <b>3</b> lives, colliding with an enemy will take <b>1</b> of them;<br/>
+                To get <b>1</b> life use a <b>waffle</b>
+            </span>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
