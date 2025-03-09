@@ -206,7 +206,7 @@ $(document).ready(function() {
         $('#gameOver').show();
         if (won) {
             $('#gameOver h1').addClass('win');
-            $('#gameOver h1').html("You won!<br/> <a href='https://m1estere.github.io/'>Developers</a><br/>");
+            $('#gameOver h1').html("You won!<br/> <a href='https://mmm.page/i-love-steve'>Developers</a><br/>");
             $('#gameOver h1').css('animation-play-state', 'running');
         } else {
             $('#gameOver h1').text("Game Over");
