@@ -6,50 +6,287 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>С днем рождения</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css" type="text/css"/>
-    <link rel="stylesheet" href="css/output.css" type="text/css"/>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
-<style>
-    section {
-        border-bottom: 2px solid red;
-    }
-</style>
-
 <body>
-    <header class="flex justify-center fixed top-0 left-0 w-full h-[var(--header-height)] z-[100] py-[32px]">
-        
-    </header>
+    <div class="progress-bar" id="progressBar" onclick="scrollToPosition(event)">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div id="imageContainer" class="image-container animated">
+        <img src="./assets/img/kuromi.png">
+    </div>
 
     <main>
-        <section id="main-section" class="relative max-h-screen w-full h-screen">
-            <span class="uppercase absolute top-[50%] left-[50%]">ПОЗДРАВЛЕНИЕ ДЛЯ ТОЙ САМОЙ ЕДИНСТВЕННОЙ И НЕПОВТОРИМОЙ...</span>
+        <section class="hero" style="user-select: none;">
+            <div class="carousels-container">
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/1.jpg">
+                        <img src="./assets/img/carousels/2.jpg">
+                        <img src="./assets/img/carousels/3.jpg">
+                    </div>
+                </div>
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/4.jpg">
+                        <img src="./assets/img/carousels/5.jpg">
+                        <img src="./assets/img/carousels/6.jpg">
+                    </div>
+                </div>
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/7.jpg">
+                        <img src="./assets/img/carousels/8.jpg">
+                        <img src="./assets/img/carousels/9.jpg">
+                    </div>
+                </div>
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/10.jpg">
+                        <img src="./assets/img/carousels/11.png">
+                        <img src="./assets/img/carousels/12.png">
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; z-index: 100;">
+                <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 96px;">поздравление для той самой единственной и неповторимой...</span>
+            </div>
+
+            <div style="position: absolute; bottom: 50px; right: 50px; z-index: 100; text-align: end;">
+                <div><span>для Веры 💐</span></div>
+                <div style="margin-top: 5px;"><span>На 21-летие 🥳</span></div>
+            </div>
         </section>
 
-        <section id="about" class="relative w-full h-screen">
-           
+        <section id="fun" style="padding-top: 50px;">
+            <div style="width: 100%; text-align: start;">
+                <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
+            </div>
+
+            <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: row; gap: 55px; position: relative; z-index: 3;">
+                <div style="max-width: 750px; text-align: center; margin-top: -150px;">
+                    <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 64px;">с кем никогда не бывает скучно</span>
+                </div>
+
+               <!-- Левый верхний угол -->
+                <div style="position: absolute; top: 60px; left: 50px; transform: rotate(-10deg);">
+                    <img src="./assets/img/meme_4.jpg" style="width: 300px; height: auto;">
+                </div>
+
+                <!-- Правый верхний угол -->
+                <div style="position: absolute; top: 70px; right: 80px; transform: rotate(5deg);">
+                    <img src="./assets/img/meme_1.png" style="width: 250px; height: auto;">
+                </div>
+
+                <!-- Левый нижний угол -->
+                <div style="position: absolute; bottom: 175px; left: 250px; transform: rotate(-8deg);">
+                    <img src="./assets/img/meme_2.gif" style="width: 200px; height: auto;">
+                </div>
+
+                <!-- Правый нижний угол -->
+                <div style="position: absolute; bottom: 220px; right: 350px; transform: rotate(-15deg);">
+                    <img src="./assets/img/meme_3.gif" style="width: 350px; height: auto;">
+                </div>
+
+                <!-- Новый правый верхний угол -->
+                <div style="position: absolute; top: 250px; right: -75px; transform: rotate(-12deg);">
+                    <img src="./assets/img/meme_7.jpg" style="width: 200px; height: auto;">
+                </div>
+
+                <!-- Новый правый верхний угол -->
+                <div style="position: absolute; top: 25px; right: 550px; transform: rotate(-5deg);">
+                    <img src="./assets/img/meme_5.gif" style="width: 250px; height: auto;">
+                </div>
+
+                <!-- Новый левый нижний угол -->
+                <div style="position: absolute; bottom: 120px; left: -80px; transform: rotate(2deg);">
+                    <img src="./assets/img/meme_6.gif" style="width: 220px; height: auto;">
+                </div>
+           </div>
+           <canvas id="canvas">Canvas is not supported in your browser - sorry.</canvas>
         </section>
 
-        <section id="projects" class="relative pt-[150px] w-full h-screen flex flex-col items-center gap-[75px]">
-           
+        <section class="beauty-hero" id="beauty" style="padding-top: 50px; position: relative;">
+            <div style="width: 100%; text-align: start; position: absolute; top: 50px; left: 180px;">
+                <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
+            </div>
+            <div class="hero-text">
+                <div>
+                    <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 64px;">кто своей красотой и милотой может просто повергнуть в шок любого</span>
+                </div>
+            </div>
+            <div class="carousels-container">
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/beauty/beauty_1.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_11.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_3.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_8.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_13.png">
+                        <img src="./assets/img/carousels/beauty/beauty_19.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_14.png">
+                    </div>
+                </div>
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/beauty/beauty_7.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_2.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_9.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_6.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_15.png">
+                        <img src="./assets/img/carousels/beauty/beauty_20.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_16.png">
+                    </div>
+                </div>
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/beauty/beauty_4.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_10.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_5.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_12.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_17.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_21.gif">
+                        <img src="./assets/img/carousels/beauty/beauty_18.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="emoji-container"></div>
         </section>
 
-        <section id="skills" class="relative pt-[150px] w-full min-h-screen">
-            
+        <section id="food" style="padding-top: 50px; position: relative;">
+            <div style="width: 100%; text-align: start; position: absolute; top: 50px; left: 180px;">
+                <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
+            </div>
+
+            <div class="emoji-container">
+                <div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+                    <div class="emoji-row">
+                        <div class="emoji-scroller scroll-row">
+                            <span>🍜🍕🍔🍟🍳🥓🍗🍱🍙🍥🍣🍤🥢🧋🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                            <span>🍜🍕🍔🍟🍳🥓🍗🍱🍙🍥🍣🍤🥢🧋🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-row">
+                        <div class="emoji-scroller scroll-row-reverse">
+                            <span>🍗🍥🍙🍣🍔🥢🍳🍟🍜🍱🧋🍕🍤🥓🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                            <span>🍗🍥🍙🍣🍔🥢🍳🍟🍜🍱🧋🍕🍤🥓🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-row">
+                        <div class="emoji-scroller scroll-row">
+                            <span>🍱🍣🍤🍥🍙🍕🍔🍜🍟🍗🥓🍤🍕🍳🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                            <span>🍱🍣🍤🍥🍙🍕🍔🍜🍟🍗🥓🍤🍕🍳🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-row">
+                        <div class="emoji-scroller scroll-row-reverse">
+                            <span>🧋🥢🍤🍗🍳🍜🍙🍱🍕🍔🍟🥓🍥🍣🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                            <span>🧋🥢🍤🍗🍳🍜🍙🍱🍕🍔🍟🥓🍥🍣🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-row">
+                        <div class="emoji-scroller scroll-row">
+                            <span>🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                            <span>🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-row">
+                        <div class="emoji-scroller scroll-row-reverse">
+                            <span>🍣🍔🍟🍳🍜🍙🍱🍕🍤🥓🍗🍥🥢🧋🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                            <span>🍣🍔🍟🍳🍜🍙🍱🍕🍤🥓🍗🍥🥢🧋🍤🍥🍗🍕🍳🥓🍔🍜🍟🍱🍙🧋🥢🍣</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: flex-start; flex-direction: row; gap: 55px; margin-top: 170px;">
+                <div style="flex: 1; position: relative; height: 600px; margin-top: -50px;">
+                    <img src="./assets/img/food/food_1.jpg" style="position: absolute; top: 20px; left: 20px; width: 160px; height: auto;">
+                    <img src="./assets/img/food/food_2.jpg" style="position: absolute; top: 40px; left: 200px; width: 150px; height: auto;">
+                    <img src="./assets/img/food/food_3.jpg" style="position: absolute; top: 100px; left: 380px; width: 190px; height: auto;">
+                    <img src="./assets/img/food/food_4.jpg" style="position: absolute; top: 200px; left: 100px; width: 150px; height: auto;">
+                    <img src="./assets/img/food/food_5.jpg" style="position: absolute; top: 220px; left: 300px; width: 230px; height: auto;">
+                    <img src="./assets/img/food/food_6.jpg" style="position: absolute; top: 300px; left: 180px; width: 250px; height: auto;">
+                    <img src="./assets/img/food/food_7.jpg" style="position: absolute; top: 380px; left: 30px; width: 270px; height: auto;">
+                    <img src="./assets/img/food/food_8.jpg" style="position: absolute; top: 400px; left: 370px; width: 240px; height: auto;">
+                </div>
+        
+                <div style="flex: 1; text-align: end; margin-top: 90px;">
+                    <div style="max-width: 750px;">
+                        <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 64px;">с кем всегда можно вкусно покушать</span>
+                    </div>
+                </div>
+            </div>
+        </section>        
+
+        <section id="lovely" style="padding-top: 50px;">
+           <div style="width: 100%; text-align: start;">
+            <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
+           </div>
+
+           <div style="width: 100%; height: fit-content; display: flex; justify-content: space-between; align-items: center; flex-direction: row; margin-top: 80px; gap: 55px; position: relative;">
+                <div style="position: relative; background-image: url('./assets/img/star.png'); width: 371px; height: 371px;">
+                    <img class="animated" src="./assets/img/jungkook.png" style="position: absolute; top: 0px; left: 70px; width: 219px; height: 278px;" />
+                </div>
+
+                <div style="max-width: 750px; text-align: center;">
+                    <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 64px;">за чье сердце пытались бороться многие</span>
+                </div>
+
+                <div style="position: relative; background-image: url('./assets/img/star.png'); width: 371px; height: 371px;">
+                    <img class="animated-reversed" src="./assets/img/me.png" style="position: absolute; top: 0px; left: 88px; width: 219px; height: 278px;" />
+                </div>
+
+                <div style="position: absolute; bottom: -280px; left: 672px;">
+                    <img src="./assets/img/heart_main.jpg" style="width: 270px; height: 370px; object-fit: cover; border: 11px solid #6B6B6B; border-radius: 5px; transform: rotate(10deg);">
+                </div>
+
+                <div class="pulse" style="position: absolute; bottom: -250px; left: 770px;">
+                    <img src="./assets/img/heart.png" style="width: 68px; height: 68px; object-fit: cover;">
+                </div>
+           </div>
+
+           <div style="position: absolute; bottom: 50px; right: 50px; z-index: 100; text-align: end;">
+                <div><span>но не многих ждал успех 😎</span></div>
+            </div>
+        </section>
+
+        <section id="support" style="padding-top: 50px;">
+            <div style="width: 100%; text-align: start;">
+                <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
+            </div>
+
+            <div style="width: 100%; height: fit-content; display: flex; justify-content: space-between; align-items: center; flex-direction: row; margin-top: 80px; gap: 55px; position: relative;">
+                <div style="max-width: 750px; text-align: center;">
+                    <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 64px;">кто всегда поможет, всегда поддержит несмотря ни на что</span>
+                </div>
+           </div>
         </section>
     </main>
 
-    <footer id="contacts" class="relative mt-[150px] w-full h-fit flex flex-col items-center gap-[75px] pb-[30px]">
-        <div class="flex justify-center items-center flex-col">
-            <div class="mt-[150px]">
-                <span class="text-gray-600 text-xl">От Ильи</span>
+    <footer id="contacts" style="height: 330px">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <div style="margin-top: 80px; text-align: center;">
+                <div style="width: 100%;">
+                    <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 32px; ">прошу тебя,<br/>оставайся такой и дальше!<br/><br/>Еще раз поздравляю тебя!</span>
+                </div><br/><br/>
+                <span style="color: white;">От Ильи ❤️</span>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/fireworks.js"></script>
 </body>
 </html>

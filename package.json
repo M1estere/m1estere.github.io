@@ -1,8 +1,22 @@
 {
   "devDependencies": {
-    "tailwindcss": "^3.4.1"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.11",
     "swiper": "^11.0.6"
-  }
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/styles.css -o ./css/output.css --watch"
+  },
+  "name": "m1estere.github.io",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
