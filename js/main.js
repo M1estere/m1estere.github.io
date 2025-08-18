@@ -1,16 +1,16 @@
 window.addEventListener("DOMContentLoaded", () => {
-    const carousels = document.querySelectorAll(".hero .infinite-carousel");
+    const carousels = document.querySelectorAll(".hero .infinite-carousel, .support-hero .infinite-carousel");
 
     const directions = [
-        "normal", "reverse", "normal", "reverse"
+        "normal", "reverse", "normal", "reverse", "normal", "reverse"
     ];
 
     const speeds = [
-        35, 50, 30, 42
+        35, 50, 30, 42, 35, 53
     ];
 
     carousels.forEach((carousel, i) => {
-        const carouselInner = carousel.querySelector(".hero .infinite-carousel div");
+        const carouselInner = carousel.querySelector(".hero .infinite-carousel div, .support-hero .infinite-carousel div");
         const carouselContent = Array.from(carouselInner.children);
 
         carouselContent.forEach(item => {
@@ -120,3 +120,11 @@ function createEmoji() {
 }
 
 setInterval(createEmoji, 300);
+
+
+function scrollToNextSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}

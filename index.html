@@ -14,6 +14,17 @@
 </head>
 
 <body>
+    <section class="bg-stars">
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+        <div class="star star6"></div>
+        <div class="star star7"></div>
+        <div class="star star8"></div>
+    </section>
+
     <div class="progress-bar" id="progressBar" onclick="scrollToPosition(event)">
         <div class="progress" id="progress"></div>
     </div>
@@ -22,7 +33,8 @@
     </div>
 
     <main>
-        <section class="hero" style="user-select: none;">
+        <section class="hero" id="hero" style="user-select: none;">
+            
             <div class="carousels-container">
                 <div class="infinite-carousel">
                     <div>
@@ -34,7 +46,7 @@
                 <div class="infinite-carousel">
                     <div>
                         <img src="./assets/img/carousels/4.jpg">
-                        <img src="./assets/img/carousels/5.jpg">
+                        <img src="./assets/img/carousels/beauty/beauty_14.png">
                         <img src="./assets/img/carousels/6.jpg">
                     </div>
                 </div>
@@ -62,10 +74,15 @@
                 <div><span>для Веры 💐</span></div>
                 <div style="margin-top: 5px;"><span>На 21-летие 🥳</span></div>
             </div>
+
+            <div class="nav-buttons">
+                <!-- <button class="nav-button up" onclick="scrollToNextSection('fun')">↑</button> -->
+                <button class="nav-button down" onclick="scrollToNextSection('fun')">↓</button>
+            </div>
         </section>
 
         <section id="fun" style="padding-top: 50px;">
-            <div style="width: 100%; text-align: start;">
+            <div class="text-with-emoji" style="width: 100%; text-align: start;">
                 <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
             </div>
 
@@ -110,10 +127,15 @@
                 </div>
            </div>
            <canvas id="canvas">Canvas is not supported in your browser - sorry.</canvas>
+
+            <div class="nav-buttons">
+                <button class="nav-button up" onclick="scrollToNextSection('hero')">↑</button>
+                <button class="nav-button down" onclick="scrollToNextSection('beauty')">↓</button>
+            </div>
         </section>
 
         <section class="beauty-hero" id="beauty" style="padding-top: 50px; position: relative;">
-            <div style="width: 100%; text-align: start; position: absolute; top: 50px; left: 180px;">
+            <div class="text-with-emoji" style="width: 100%; text-align: start; position: absolute; top: 50px; left: 180px;">
                 <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
             </div>
             <div class="hero-text">
@@ -157,10 +179,14 @@
                 </div>
             </div>
             <div class="emoji-container"></div>
+            <div class="nav-buttons">
+                <button class="nav-button up" onclick="scrollToNextSection('fun')">↑</button>
+                <button class="nav-button down" onclick="scrollToNextSection('food')">↓</button>
+            </div>
         </section>
 
         <section id="food" style="padding-top: 50px; position: relative;">
-            <div style="width: 100%; text-align: start; position: absolute; top: 50px; left: 180px;">
+            <div class="text-with-emoji" style="width: 100%; text-align: start; position: absolute; top: 50px; left: 180px;">
                 <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
             </div>
 
@@ -228,10 +254,15 @@
                     </div>
                 </div>
             </div>
+
+            <div class="nav-buttons">
+                <button class="nav-button up" onclick="scrollToNextSection('beauty')">↑</button>
+                <button class="nav-button down" onclick="scrollToNextSection('lovely')">↓</button>
+            </div>
         </section>        
 
         <section id="lovely" style="padding-top: 50px;">
-           <div style="width: 100%; text-align: start;">
+           <div class="text-with-emoji" style="width: 100%; text-align: start;">
             <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
            </div>
 
@@ -260,22 +291,53 @@
            <div style="position: absolute; bottom: 50px; right: 50px; z-index: 100; text-align: end;">
                 <div><span>но не многих ждал успех 😎</span></div>
             </div>
+
+            <div class="nav-buttons">
+                <button class="nav-button up" onclick="scrollToNextSection('food')">↑</button>
+                <button class="nav-button down" onclick="scrollToNextSection('support')">↓</button>
+            </div>
         </section>
 
-        <section id="support" style="padding-top: 50px;">
-            <div style="width: 100%; text-align: start;">
+        <section class="support-hero" id="support" style="padding-top: 50px;">
+            <div class="text-with-emoji" style="width: 100%; text-align: start;">
                 <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 80px;">для той</span>
             </div>
 
+            <div class="carousels-container">
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/support/support_1.gif">
+                        <img src="./assets/img/carousels/support/support_2.jpg">
+                        <img src="./assets/img/carousels/support/support_3.jpg">
+                        <img src="./assets/img/carousels/support/support_4.jpg">
+                        <img src="./assets/img/carousels/support/support_5.jpg">
+                    </div>
+                </div>
+                <div class="infinite-carousel">
+                    <div>
+                        <img src="./assets/img/carousels/support/support_6.jpg">
+                        <img src="./assets/img/carousels/support/support_7.jpg">
+                        <img src="./assets/img/carousels/support/support_8.png">
+                        <img src="./assets/img/carousels/support/support_9.jpg">
+                        <img src="./assets/img/carousels/support/support_10.jpg">
+                    </div>
+                </div>
+            </div>
+
             <div style="width: 100%; height: fit-content; display: flex; justify-content: space-between; align-items: center; flex-direction: row; margin-top: 80px; gap: 55px; position: relative;">
-                <div style="max-width: 750px; text-align: center;">
+                <div style="max-width: 850px; text-align: start; margin-top: 120px;">
                     <span style="text-transform: uppercase; font-weight: bolder; letter-spacing: 1.2px; font-size: 64px;">кто всегда поможет, всегда поддержит несмотря ни на что</span>
                 </div>
            </div>
+           
+            <div class="nav-buttons">
+                <button class="nav-button up" onclick="scrollToNextSection('lovely')">↑</button>
+                <button class="nav-button down" onclick="scrollToNextSection('contacts')">↓</button>
+            </div>
         </section>
     </main>
 
-    <footer id="contacts" style="height: 330px">
+    <footer id="contacts" style="height: 330px; user-select: none;">
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
             <div style="margin-top: 80px; text-align: center;">
                 <div style="width: 100%;">

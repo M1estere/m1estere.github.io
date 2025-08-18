@@ -51,7 +51,7 @@ body {
 }
 
 section {
-  border-bottom: 2px solid red;
+  /* border-bottom: 2px solid red; */
   position: relative;
   max-height: 100vh;
   width: 100%;
@@ -449,3 +449,140 @@ canvas{
   0% { transform: translateX(0); }
   100% { transform: translateX(50%); }
 }
+
+.support-hero {
+  padding: 1.5em;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.support-hero .carousels-container {
+  position: absolute;
+  width: 30%;
+  height: 200%;
+  top: 50%;
+  max-height: 100vh;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.support-hero .infinite-carousel {
+  margin: 2em 0;
+}
+
+.support-hero .infinite-carousel > div {
+  height: 100%;
+  width: 100%;
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.support-hero .infinite-carousel img {
+  height: 70%;
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bg-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-stars .star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: animate 8s ease-in-out infinite;
+}
+
+.bg-stars .star.star1 {
+  animation-delay: 0s;
+  background: url(../assets/img/stars/star1.png);
+}
+.bg-stars .star.star7 {
+  animation-delay: -6s;
+  background: url(../assets/img/stars/star7.png);
+}
+
+@keyframes animate {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    opacity: 0;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    opacity: .12;
+  }
+}
+
+.text-with-emoji {
+  width: 100%;
+  text-align: start;
+  position: relative;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1.2px;
+}
+
+.text-with-emoji span {
+  position: relative;
+}
+
+.text-with-emoji span::after {
+  content: '🎀';
+  position: absolute;
+  top: -38px;
+  font-size: 1em;
+  right: -54px;
+  transform: rotate(14deg);
+  display: block;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; 
+  z-index: 500;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f4b5eb1f;
+  color: #000;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #e0a3d3;
+}
+
+
