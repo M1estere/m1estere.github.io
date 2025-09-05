@@ -488,3 +488,18 @@ body::-webkit-scrollbar {
 .copyright {
     color: #393939;
 }
+
+.transitions-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+}
+
+.love-transition-btn a {
+    text-decoration: none;
+    font-size: 25px;
+}

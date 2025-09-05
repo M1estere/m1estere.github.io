@@ -1,0 +1,32 @@
+/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+:root {
+  --main-black-color: #222222;
+  --header-height: 134px;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  background-color: var(--main-black-color);
+  z-index: 0;
+  max-width: 2100px;
+  margin: 0 auto;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 100px;
+  background: #453838;
+  -webkit-box-shadow: inset 0 0 6px #00000080;
+}

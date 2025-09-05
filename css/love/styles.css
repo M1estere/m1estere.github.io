@@ -1,0 +1,588 @@
+:root {
+  --main-black-color: #222222;
+  --header-height: 134px;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;
+  user-select: none;
+}
+
+body {
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  background-color: var(--main-black-color);
+  z-index: 0;
+  max-width: 2100px;
+  margin: 0 auto;
+
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 100px;
+  background: #453838; 
+  -webkit-box-shadow: inset 0 0 6px #00000080; 
+}
+
+section {
+  /* border-bottom: 2px solid red; */
+  position: relative;
+  max-height: 100vh;
+  width: 100%;
+  height: 100vh;
+
+  box-sizing: border-box;
+  padding-left: 150px;
+  padding-right: 150px;
+  user-select: none;
+}
+
+#main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated {
+  /* transform-origin: bottom center; */
+  animation: tilt 1s infinite;
+}
+
+.animated-reversed {
+  /* transform-origin: bottom center; */
+  animation: tilt2 1s infinite;
+}
+
+@keyframes tilt {
+  0% {
+      transform: rotate(15deg);
+  }
+  50% {
+      transform: rotate(15deg);
+  }
+  51% {
+      transform: rotate(-15deg);
+  }
+  100% {
+      transform: rotate(-15deg);
+  }
+}
+
+@keyframes tilt2 {
+  0% {
+      transform: rotate(-15deg);
+  }
+  50% {
+      transform: rotate(-15deg);
+  }
+  51% {
+      transform: rotate(15deg);
+  }
+  100% {
+      transform: rotate(15deg);
+  }
+}
+
+.pulse {
+  animation: pulse-animation 1s infinite;
+}
+
+@keyframes pulse-animation {
+  0%, 100% {
+      transform: scale(1);
+  }
+  1% {
+    transform: scale(1.2);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  51% {
+    transform: scale(1);
+  }
+}
+
+
+.hero {
+  padding: 1.5em;
+  padding-left: 150px;
+  padding-right: 150px;
+  height: 100vh;
+  min-height: 40em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  background-image: radial-gradient(
+    rgba(38, 44, 52, 0.5) 0%,
+    rgba(38, 44, 52, 0.5) 60%,
+    #101117 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero .carousels-container {
+  position: absolute;
+  width: 110%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.hero .infinite-carousel {
+  margin: 2em 0;
+}
+
+.hero .infinite-carousel > div {
+  height: max-content;
+  width: 100%;
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.hero .infinite-carousel img {
+  height: 100%;
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+  /* border: 8px solid white;
+  border-bottom: 100px solid white;
+  background-color: white; */
+}
+
+@keyframes move {
+  to {
+    transform: translateY(calc(-50% - 0.4em));
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .hero .carousels-container {width: 110%;}
+  .hero .infinite-carousel img {width: 25em;}
+}
+
+@media screen and (max-width: 1100px) {
+  .hero .carousels-container {width: 120%;}
+  .hero .infinite-carousel img {width: 20em;}
+}
+
+@media screen and (max-width: 700px) {
+  .hero .carousels-container {width: 150%;}
+  .hero .infinite-carousel img {width: 15em;}
+}
+
+@media screen and (max-width: 400px) {
+  .hero .carousels-container {width: 180%;}
+  .hero .infinite-carousel img {width: 12em;}
+}
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #e0e0e02a;
+  /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); */
+  z-index: 5555;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: #F4B5EB;
+  transition: width 0.3s;
+}
+
+.image-container {
+  z-index: 5555;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  transition: left 0.3s;
+}
+
+.image-container img {
+  width: 30px;
+  height: auto;
+}
+
+#lovely {
+  position: relative;
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+.heart {
+  z-index: -50;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('../../assets/love/img/heart.png');
+  background-size: cover;
+  animation: float 1s linear infinite;
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(150px);
+      opacity: 1;
+  }
+  50% {
+      transform: translateY(-600px);
+      opacity: 0.7;
+  }
+  100% {
+      transform: translateY(150px);
+      opacity: 0;
+  }
+}
+
+canvas{
+	display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.beauty-hero {
+  z-index: 5;
+  padding: 1.5em;
+  padding-left: 150px;
+  padding-right: 150px;
+  height: 100vh;
+  min-height: 40em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.beauty-hero .carousels-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.beauty-hero .infinite-carousel {
+  margin: 2em 0;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.beauty-hero .infinite-carousel > div {
+  height: max-content;
+  width: 100%;
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.8em;
+  list-style: none;
+}
+
+.beauty-hero .infinite-carousel img {
+  max-width: 12em;
+  border-radius: 8px;
+  z-index: 5;
+}
+
+.hero-text {
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text > div {
+  max-width: 750px;
+}
+
+@media screen and (max-width: 1200px) {
+  .beauty-hero {
+    grid-template-columns: 1fr;
+  }
+  .beauty-hero .carousels-container {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .beauty-hero .infinite-carousel {
+    width: 80%;
+  }
+}
+
+.emoji-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.emoji {
+  z-index: -1;
+  position: absolute;
+  font-size: 24px;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: popFade 3s ease-out forwards;
+}
+
+@keyframes popFade {
+  0% {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+  20% {
+      opacity: 1;
+      transform: scale(1.2);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.6);
+  }
+}
+
+#food .emoji-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: -5;
+  gap: 10px;
+}
+
+#food .emoji-row {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#food .emoji-row span {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#food .emoji-scroller {
+  display: inline-block;
+  font-size: 11em;
+  height: 150%;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-row {
+  animation: scrollRow 60s linear infinite;
+}
+
+.scroll-row-reverse {
+  animation: scrollRowReverse 70s linear infinite;
+}
+
+@keyframes scrollRow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scrollRowReverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.support-hero {
+  padding: 1.5em;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.support-hero .carousels-container {
+  position: absolute;
+  width: 30%;
+  height: 200%;
+  top: 50%;
+  max-height: 100vh;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.support-hero .infinite-carousel {
+  margin: 2em 0;
+}
+
+.support-hero .infinite-carousel > div {
+  height: 100%;
+  width: 100%;
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+.support-hero .infinite-carousel img {
+  height: 70%;
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bg-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-stars .star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: animate 8s ease-in-out infinite;
+}
+
+.bg-stars .star.star1 {
+  animation-delay: 0s;
+  background: url(../../assets/love/img/stars/star1.png);
+}
+.bg-stars .star.star7 {
+  animation-delay: -6s;
+  background: url(../../assets/love/img/stars/star7.png);
+}
+
+@keyframes animate {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    opacity: 0;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    opacity: .12;
+  }
+}
+
+.text-with-emoji {
+  width: 100%;
+  text-align: start;
+  position: relative;
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1.2px;
+}
+
+.text-with-emoji span {
+  position: relative;
+}
+
+.text-with-emoji span::after {
+  content: '🎀';
+  position: absolute;
+  top: -38px;
+  font-size: 1em;
+  right: -54px;
+  transform: rotate(14deg);
+  display: block;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; 
+  z-index: 500;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f4b5eb1f;
+  color: #000;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #e0a3d3;
+}
+
+
