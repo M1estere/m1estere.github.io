@@ -29,20 +29,38 @@
         const mainGif = document.getElementById('mainGif');
         const questionText = document.getElementById('questionText');
 
+        const newGifUrl = "https://media1.tenor.com/m/nh4tzup-bhIAAAAd/monkey-monkey-dancing.gif";
+        const preloadGif = new Image();
+        preloadGif.src = newGifUrl;
+
         btnNo.addEventListener('click', function () {
             alert('Охенела?');
             btnNo.classList.add('hidden');
         });
 
         btnYes.addEventListener('click', function () {
-            mainGif.src = "https://media1.tenor.com/m/nh4tzup-bhIAAAAd/monkey-monkey-dancing.gif";
-            mainGif.alt = "Праздничная гифка";
+            mainGif.style.opacity = '0';
+            
             questionText.innerHTML = "Ураааа<br>Тебе крупно повезло!";
-
             btnYes.style.display = 'none';
             btnNo.style.display = 'none';
-
+            
             card.classList.add('celebrate');
+
+            if (preloadGif.complete) {
+                mainGif.src = newGifUrl;
+                mainGif.alt = "Праздничная гифка";
+                mainGif.style.opacity = '1';
+            } else {
+                mainGif.src = '';
+                mainGif.style.backgroundColor = '#ffe0e7';
+                
+                preloadGif.onload = function() {
+                    mainGif.src = newGifUrl;
+                    mainGif.alt = "Праздничная гифка";
+                    mainGif.style.opacity = '1';
+                };
+            }
 
             startConfettiBurst();
         });
@@ -121,11 +139,9 @@
                 function fall() {
                     if (!confetti.parentNode) return;
 
-                    posX += angleX * 10.5;
-
+                    posX += angleX * 9;
                     verticalSpeed += gravity;
                     posY += verticalSpeed;
-
                     rotation += rotationSpeed;
 
                     confetti.style.left = posX + 'px';
