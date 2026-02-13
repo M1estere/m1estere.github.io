@@ -29,7 +29,7 @@
         const mainGif = document.getElementById('mainGif');
         const questionText = document.getElementById('questionText');
 
-        const newGifUrl = "https://media1.tenor.com/m/nh4tzup-bhIAAAAd/monkey-monkey-dancing.gif";
+        const newGifUrl = "assets/valentine/happy.gif";
         const preloadGif = new Image();
         preloadGif.src = newGifUrl;
 
