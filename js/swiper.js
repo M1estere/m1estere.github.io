@@ -16,6 +16,14 @@ const data = [
         link: 'https://thunder-fox-studios.itch.io/racing-drift-2',
     },
     {
+        image: 'assets/img/projects/Task_Tracker.png',
+        title: 'Task Tracker',
+        desc: 'Useful tool for control and management',
+        tools: 'PHP, Laravel, React',
+        status: 'Released',
+        link: 'https://github.com/M1estere/laravel-task-tracker',
+    },
+    {
         image: 'assets/img/projects/Byte_Bound.png',
         title: 'Byte Bound',
         desc: 'A game that allows players to play as electric AI',
@@ -32,6 +40,14 @@ const data = [
         link: 'https://github.com/M1estere/Ink_Dreams',
     },
     {
+        image: 'assets/img/projects/Wmed.png',
+        title: 'Women\'s Medicine',
+        desc: 'Informational website about women health',
+        tools: 'PHP, Laravel',
+        status: 'Released',
+        link: 'https://github.com/M1estere/wmed',
+    },
+    {
         image: 'assets/img/projects/Down_The_Deep.png',
         title: 'Down The Deep',
         desc: 'A game where players can feel as an underwater explorers',
@@ -46,6 +62,14 @@ const data = [
         tools: 'Unity, C#',
         status: 'Released',
         link: 'https://m1estere.itch.io/the-darkest-night',
+    },
+    {
+        image: 'assets/img/projects/Book_Buyer.png',
+        title: 'Book Buyer Dude',
+        desc: 'Website for a book store with online orders',
+        tools: 'node.js, Tailwind, Redis',
+        status: 'Released',
+        link: 'https://github.com/M1estere/book-store',
     },
     {
         image: 'assets/img/projects/Tune_Studio.png',
