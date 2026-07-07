@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M1estere</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./assets/favicon.ico">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://use.fontawesome.com/58781434b0.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/output.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="transitions-container">
         <div class="love-transition-btn">
             <a href="love.html">💞</a>
@@ -30,108 +29,280 @@
     
     <div class="vl"></div>
     <h2 class="vl-text">Scroll</h2>
+=======
+    <header class="flex justify-center fixed top-0 left-0 w-full z-[100] py-[32px]">
+        <div id="navbar"
+            class="transition duration-300 flex container flex-row size-full items-center pr-[10px] pl-[20px] rounded-full">
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-links-desktop flex-1 flex-row items-center gap-[40px]" id="navLinksDesktop">
+                <span class="header-section-text nav-button"><a href="#about">ABOUT</a></span>
+                <span class="header-section-text nav-button"><a href="#projects">PROJECTS</a></span>
+                <span class="header-section-text nav-button"><a href="#skills">SKILLS</a></span>
+            </div>
+
+            <div class="logo-container flex-1 flex flex-row justify-center items-center">
+                <span class="text-center text-white text-3xl font-bold select-none"><a href="#">M1estere</a></span>
+            </div>
+
+            <div class="contact-btn-container flex-1 flex flex-row justify-end">
+                <a href="#contacts">
+                    <div
+                        class="border-white border-2 rounded-full px-[20px] py-[8px] start-button flex justify-center items-center h-fit leading-6">
+                        <span class="circle-fill"></span>
+                        <span class="header-section-text">Contact me</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <span class="mobile-menu-item"><a href="#about">ABOUT</a></span>
+                <span class="mobile-menu-item"><a href="#projects">PROJECTS</a></span>
+                <span class="mobile-menu-item"><a href="#skills">SKILLS</a></span>
+                <span class="mobile-menu-item"><a href="#contacts">CONTACT</a></span>
+            </div>
+        </div>
+    </header>
+
+>>>>>>> develop
     <main>
-        <section id="first-section" class="section">
-            <div class="section-wrapper">
-                <div class="main-title-container">
-                    <h1 class="main-title-heading">M1estere</h1>
-                    <p class="main-title-paragraph">Game Developer</p>
-                </div>
-            </div>
-        </section>
-        <section id="second-section" class="section">
-            <div class="section-wrapper">
-                <img class="vl-circle" src="./assets/img/donutFirst.png"></img>
-                <div class="main-info-container">
-                    <img class="bg-img" src="./assets/img/human.png">
-                    <img class="bg-img" src="./assets/img/info.png">
-                    <p class="main-info-paragraph"> My name is Ilya , I am 20 years old and I am currently studying at the university in Russia, Moscow for a bachelor's degree in IT sphere. A little information about me: I really love game development and I have been doing it for almost
-                        2 years now.
-                    </p>
-                    <img class="main-photo" src="./assets/img/main-photo.png" alt="main photo">
-                </div>
-            </div>
-        </section>
-        <section id="third-section" class="section">
-            <div class="section-wrapper">
-                <img class="vl-circle" src="./assets/img/donutSecond.png"></img>
-                <div class="video-container">
-                    <img class="bg-img" src="./assets/img/gamepadNew.png">
-                    <img class="bg-img" src="./assets/img/playButtonDark.png">
-                    <img class="bg-img" src="./assets/img/ArrowPNG.png">
-                    <iframe class="video-frame" src="https://www.youtube.com/embed/oWYYWwCh1g4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="paragraph-wrapper">
-                        <p class="video-preview-paragraph">Apart from game development I enjoy making<br> music and videos.
-                            <br>Here is one of my works.
-                        </p>
+        <section id="main-section" class="relative max-h-screen w-full h-screen">
+            <div class="h-[calc(var(--header-height)+26px)]"></div>
+            <div
+                class="h-[calc(100%-var(--header-height)-26px)] w-[55%] mx-auto items-center justify-center flex flex-col">
+                <span class="text-center text-white text-[100px] leading-[120px] font-bold select-none">
+                    Inspired Web, Backend and Game Development
+                </span>
+
+                <div class="py-20 flex flex-row gap-[80px]">
+                    <div class="border-white border-2 rounded-[5px] px-[40px] py-[15px] start-button">
+                        <span class="circle-fill"></span>
+                        <span class="button-text">Resume</span>
+                    </div>
+
+                    <div class="border-white border-2 rounded-[5px] px-[40px] py-[15px] start-button"
+                        onclick="window.open('https://github.com/M1estere', '_blank')">
+                        <span class="circle-fill"></span>
+                        <span class="button-text">Portfolio</span>
                     </div>
                 </div>
             </div>
 
+            <div
+                class="z-[-2] size-[650px] absolute bottom-0 left-[15%] rounded-full bg-gradient-to-t from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+
+            <div
+                class="z-[-2] size-[250px] absolute top-[20%] right-[25%] rounded-full bg-gradient-to-bl from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
         </section>
-        <section id="fourth-section" class="section">
-            <div class="section-wrapper">
-                <img class="vl-circle" src="./assets/img/donutThird.png"></img>
-                <div class="projects-section-container">
-                    <img class="bg-img" src="./assets/img/steeringWheel.png">
-                    <img class="bg-img" src="./assets/img/arrowKeys.png">
-                    <p class="projects-paragraph">Here are the most interesting projects I have made so far.
-                        <br>Though it is not too much, I hope that in the future it will be overfilled with some cool and interesting projects.
-                    </p>
-                    <ul class="project-list">
-                        <li class="project-list-item">
-                            <div class="project-item-container">
-                                <img src="./assets/img/RacingDriftRegular.png" alt="project" class="project-image">
-                                <a class="project-item-overlay" href="https://m1estere.itch.io/racin-drift" target="_blank"><img src="./assets/img/HighlitedRacingDrift.png"></a>
-                            </div>
-                        </li>
-                        <li class="project-list-item">
-                            <div class="project-item-container">
-                                <img src="./assets/img/RegularDownTheDeep.png" alt="project" class="project-image">
-                                <a class="project-item-overlay" href="https://m1estere.itch.io/down-the-deep" target="_blank"><img src="./assets/img/HighlitedDownTheDeep.png"></a>
-                            </div>
-                        </li>
-                        <li class="project-list-item">
-                            <div class="project-item-container">
-                                <img src="./assets/img/RegularSaveCircle.png" alt="project" class="project-image">
-                                <a class="project-item-overlay" href="https://m1estere.itch.io/save-circle" target="_blank"><img src="./assets/img/HighlitedSaveCircle.png"></a>
-                            </div>
-                        </li>
-                        <li class="project-list-item">
-                            <div class="project-item-container">
-                                <img src="./assets/img/RegularTLotDN.png" alt="project" class="project-image">
-                                <a class="project-item-overlay" href="https://m1estere.itch.io/tlotdn" target="_blank"><img src="./assets/img/HighlitedTLotDN.png"></a>
-                            </div>
-                        </li>
-                    </ul>
+
+        <section id="about" class="relative w-full h-screen">
+            <div class="flex flex-row size-full px-20">
+                <div class="w-[50%] h-full flex-1 flex justify-end pr-20 items-center">
+                    <div class="w-[75%]">
+                        <div
+                            class="red-section-title w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                            <span class="text-start text-red-600 text-2xl font-normal tracking-wide">ABOUT</span>
+                        </div>
+                        <span
+                            class="text-start text-white text-3xl font-bold tracking-wide blink-cursor w-fit">Developer</span></br>
+                        <span class="text-start text-white text-2xl font-light tracking-wide">
+                            I am Ilya, a 23-years-old guy with a passion for web development, I love learning and
+                            learning something new, I do it quickly and productively.
+                            I am meticulous, I approach the development of projects responsibly, I bring them all to the
+                            end, I control the development process.
+                            I like to delve into details and understand the intricacies of production technologies.
+                        </span>
+                    </div>
                 </div>
+
+                <div class="w-[50%] h-full flex-1 flex justify-center items-center">
+                    <img src="assets/img/me.jpg" class="rounded-[20px] object-cover h-[80%] w-[80%]" />
+                </div>
+            </div>
+
+            <div
+                class="z-[-2] size-[350px] absolute bottom-[18%] left-[3%] rounded-full bg-gradient-to-tr from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+        </section>
+
+        <section id="projects" class="relative pt-[150px] w-full h-screen flex flex-col items-center gap-[75px]">
+            <div class="flex justify-center items-center flex-col">
+                <div
+                    class="red-section-title w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                    <span class="text-start text-red-600 text-2xl font-normal tracking-wide uppercase">projects</span>
+                </div></br>
+
+                <div>
+                    <span class="font-bold text-center text-white text-3xl tracking-wide">Watch my most interesting
+                        stuff</span>
+                </div>
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                </div>
+            </div>
+
+            <div
+                class="z-[-2] size-[400px] translate-x-1/2 absolute top-[-3%] right-[50%] rounded-full bg-gradient-to-t from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+        </section>
+
+        <section id="skills" class="relative pt-[150px] w-full min-h-screen">
+            <div class="w-[75%] flex flex-col items-center gap-[75px] mx-auto">
+                <div class="flex justify-center items-center flex-col">
+                    <div
+                        class="red-section-title w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                        <span class="text-start text-red-600 text-2xl font-normal tracking-wide uppercase">skills</span>
+                    </div></br>
+
+                    <div>
+                        <span class="font-bold text-center text-white text-3xl tracking-wide">What I am made of</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-y-[120px] gap-x-[90px] justify-between flex-wrap skills-block">
+                    <div>
+                        <img class="max-h-[96px] w-[176px]" src="assets/img/skills/php.png" alt="php" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/html.png" alt="html" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/js.png" alt="js" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/python.png" alt="python" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/git.png" alt="git" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/sql.png" alt="sql" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/laravel.png" alt="laravel" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/csharp.png" alt="csharp" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/unity.png" alt="unity" />
+                    </div>
+
+                    <div>
+                        <img src="assets/img/skills/android_studio.png" alt="android_studio" />
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="z-[-2] size-[420px] absolute top-[3%] left-[15%] rounded-full bg-gradient-to-tr from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
+
+            <div
+                class="z-[-2] size-[650px] absolute top-[7%] right-[15%] rounded-full bg-gradient-to-l from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-icons-container">
-            <ul class="social-list">
-                <li class="social-list-item">
-                    <a class="social-list-link" href="https://m1estere.itch.io/" target="_blank"><img src='./assets/svg/itch-icon.svg' alt="itch logo"></a>
-                </li>
-                <li class="social-list-item">
-                    <a class="social-list-link" href="https://vk.com/m1estere" target="_blank"><i
-                            class="fa fa-vk fa-lg" aria-hidden="true"></i></a>
-                </li>
-                <li class="social-list-item">
-                    <a class="social-list-link" href="https://github.com/M1estere" target="_blank"><i
-                            class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-                </li>
-            </ul>
+
+    <footer id="contacts" class="relative mt-[150px] w-full h-fit flex flex-col items-center gap-[75px] pb-[30px]">
+        <div class="flex justify-center items-center flex-col">
+            <div
+                class="red-section-title w-fit h-fit px-[20px] py-[3px] bg-red-500 bg-opacity-50 border-2 border-red-600 rounded-full">
+                <span class="text-start text-red-600 text-2xl font-normal tracking-wide uppercase">contact me</span>
+            </div></br>
+
+            <div>
+                <span class="font-bold text-center text-white text-3xl tracking-wide">Let's get to know each
+                    other</span>
+
+                <div class="mt-[20px]">
+                    <div class="flex flex-row justify-start items-center gap-[20px]">
+                        <img src="assets/img/footer/mail.png" alt="mail" />
+                        <span class="text-xl text-white text-start tracking-wide"><a
+                                href="mailto:7156643@gmail.com">7156643@gmail.com</a></span>
+                    </div>
+
+                    <div class="mt-[10px] flex flex-row justify-start items-center gap-[20px]">
+                        <img src="assets/img/footer/phone.png" alt="phone" />
+                        <span class="text-xl text-white text-start tracking-wide"><a href="tel:89057156643">8 (905)
+                                715-66-43</a></span>
+                    </div>
+                </div>
+
+                <div class="mt-[50px] flex flex-row justify-between items-center h-fit footer-icons-block">
+                    <div>
+                        <a href="https://github.com/M1estere" target="_blank">
+                            <img src="assets/img/footer/github.png" alt="github" />
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.instagram.com/ilya_solov" target="_blank">
+                            <img src="assets/img/footer/instagram.png" alt="instagram" />
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://m1estere.itch.io/" target="_blank">
+                            <img src="assets/img/footer/itch.png" alt="itch" />
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="https://vk.com/m1estere" target="_blank">
+                            <img src="assets/img/footer/vk.png" alt="vk" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-[150px]">
+                <span class="text-gray-600 text-xl select-none">© 2026</span>
+            </div>
+
+            <div
+                class="z-[-2] size-[300px] absolute top-[-5%] left-[35%] rounded-full bg-gradient-to-tr from-[#22222205] via-[#22222210] via-30% to-[#FFFFFF20]">
+            </div>
         </div>
-        <div class="footer-text">
-            <ul class="contacts-list">
-                <li class="contacts-list-item">7156643@mail.ru</li>
-                <li class="contacts-list-item">8(905)715-66-43</li>
-                <li><span class="copyright">&copy;2025</span></li>
-            </ul>
-        </div>
+
     </footer>
+
+    <div class="skill-tooltip" id="skillTooltip">
+        <div class="skill-tooltip-header">
+            <img src="" alt="" id="tooltipIcon" />
+            <div>
+                <span id="tooltipTitle">Название</span>
+                <span id="tooltipSubtitle">Категория</span>
+            </div>
+        </div>
+        <div class="skill-tooltip-body">
+            <p id="tooltipDescription">Описание навыка</p>
+            <p class="skill-level" id="tooltipLevel">Владею неплохо</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
 </html>
